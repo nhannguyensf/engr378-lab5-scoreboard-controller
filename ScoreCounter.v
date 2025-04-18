@@ -21,7 +21,7 @@ module ScoreCounter (
             if (tens < 9)
                 tens <= tens + 1;
         end else if (inc1_pulse) begin
-            if (tens * 10 + ones < 99) begin
+            if ((tens < 9) || (ones < 9)) begin
                 if (ones < 9)
                     ones <= ones + 1;
                 else begin
